@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- res/drawable/resized_image.xml -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <bitmap
-            android:src="@drawable/tambah"
+            android:src="@drawable/logo" <!-- Ganti dengan nama file gambar -->
             android:gravity="center"
-            android:width="70dp"/>
+            android:width="24dp" <!-- Atur ukuran gambar di sini -->
+            android:height="24dp" />
     </item>
 </layer-list>
+

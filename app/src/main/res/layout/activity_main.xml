@@ -11,20 +11,33 @@
     <!-- Header -->
 
 
-    <TextView
-        android:id="@+id/tvHeader"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/header_background"
-        android:fontFamily="@font/poppins"
-        android:gravity="center"
-        android:padding="8dp"
-        android:text="My Coins"
-        android:textColor="@android:color/white"
-        android:textSize="34sp"
-        android:textStyle="bold"
+        android:padding="5dp">
 
-        />
+        <!-- ImageView -->
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/logo"
+            android:layout_gravity="start|center_vertical"
+            android:paddingEnd="8dp" />
+
+        <!-- TextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:fontFamily="@font/poppins"
+            android:text="My Coins"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
 
     <!-- Tab Layout -->
     <LinearLayout
@@ -35,32 +48,60 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp">
 
-        <Button
+        <LinearLayout
             android:id="@+id/btnBerlangsung"
-            android:layout_width="match_parent"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:orientation="horizontal"
             android:background="@drawable/tab_background_selected"
-            android:fontFamily="@font/poppins"
-            android:text="Berlangsung"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold|italic" />
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:onClick="onButtonClick">
 
-        <Button
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/roket"
+                android:contentDescription="Icon Berlangsung" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="BERLANGSUNG"
+                android:layout_marginLeft="7dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/btnTercapai"
-            android:layout_width="match_parent"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
             android:background="@drawable/tab_background_unselected"
-            android:fontFamily="@font/poppins"
-            android:text="Tercapai"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:textStyle="bold|italic" />
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:onClick="onButtonClick">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="TERCAPAI"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
     </LinearLayout>
+
 
     <!-- Content Area -->
     <LinearLayout
