@@ -1,5 +1,6 @@
 package com.example.macoin
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.ComponentActivity
@@ -8,6 +9,7 @@ class MainActivity : ComponentActivity() {
 
     private lateinit var btnBerlangsung: Button
     private lateinit var btnTercapai: Button
+    private lateinit var btnNavigate: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,6 +17,7 @@ class MainActivity : ComponentActivity() {
 
         btnBerlangsung = findViewById(R.id.btnBerlangsung)
         btnTercapai = findViewById(R.id.btnTercapai)
+        btnNavigate = findViewById(R.id.btnNavigate)
 
         btnBerlangsung.setOnClickListener {
             selectTab(btnBerlangsung, btnTercapai)
@@ -22,6 +25,11 @@ class MainActivity : ComponentActivity() {
 
         btnTercapai.setOnClickListener {
             selectTab(btnTercapai, btnBerlangsung)
+        }
+
+        btnNavigate.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
         }
     }
 
