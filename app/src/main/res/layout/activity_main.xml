@@ -42,7 +42,7 @@
     <!-- Tab Layout -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:orientation="horizontal"
         android:background="@drawable/tab_background"
         android:layout_marginTop="16dp"
@@ -51,13 +51,13 @@
         <LinearLayout
             android:id="@+id/btnBerlangsung"
             android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:background="@drawable/tab_background_selected"
             android:clickable="true"
             android:focusable="true"
-            android:padding="8dp"
+            android:padding="10dp"
             android:onClick="onButtonClick">
 
             <ImageView
@@ -81,13 +81,13 @@
         <LinearLayout
             android:id="@+id/btnTercapai"
             android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:background="@drawable/tab_background_unselected"
             android:clickable="true"
             android:focusable="true"
-            android:padding="8dp"
+            android:padding="10dp"
             android:onClick="onButtonClick">
 
             <ImageView

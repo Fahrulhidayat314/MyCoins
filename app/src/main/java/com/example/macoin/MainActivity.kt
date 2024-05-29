@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
         }
 
         btnNavigate.setOnClickListener {
-            val intent = Intent(this, SecondActivity::class.java)
+            val intent = Intent(this, AddSavingActivity::class.java)
             startActivity(intent)
         }
     }
