@@ -6,7 +6,6 @@ import android.widget.Button
 import androidx.activity.ComponentActivity
 
 class MainActivity : ComponentActivity() {
-
     private lateinit var btnBerlangsung: Button
     private lateinit var btnTercapai: Button
     private lateinit var btnNavigate: Button
@@ -27,10 +26,10 @@ class MainActivity : ComponentActivity() {
             selectTab(btnTercapai, btnBerlangsung)
         }
 
-        btnNavigate.setOnClickListener {
-            val intent = Intent(this, AddSavingActivity::class.java)
-            startActivity(intent)
-        }
+        //btnNavigate.setOnClickListener {
+        //    val intent = Intent(this, AddSavingActivity::class.java)
+        //    startActivity(intent)
+        //}
     }
 
     private fun selectTab(selectedButton: Button, unselectedButton: Button) {
@@ -40,4 +39,5 @@ class MainActivity : ComponentActivity() {
         unselectedButton.setBackgroundResource(R.drawable.tab_background_unselected)
         unselectedButton.setTextColor(resources.getColor(android.R.color.black))
     }
+
 }
